@@ -1,6 +1,6 @@
 package metier;
 
-public abstract class Credit {
+public class Credit {
 
 	private Client client;
 

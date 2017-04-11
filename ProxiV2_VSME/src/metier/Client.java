@@ -10,10 +10,18 @@ public class Client extends Personne {
 	private Collection<Credit> credits = new ArrayList<Credit>();
 	private Conseiller conseiller;
 	private String typeClient; //particulier si client Particulier et entreprise si client Entreprise
-	
+	private int idClient;
 	
 
 
+
+	public int getIdClient() {
+		return idClient;
+	}
+
+	public void setIdClient(int idClient) {
+		this.idClient = idClient;
+	}
 
 	public String getTypeClient() {
 		return typeClient;

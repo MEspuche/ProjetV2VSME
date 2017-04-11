@@ -7,8 +7,18 @@ public class Conseiller extends Personne {
 
 	private Collection<Client> clients = new ArrayList<Client>();
 	private Gerant gerant;
+	private int idConseiller;
 	
 	
+	
+
+	public int getIdConseiller() {
+		return idConseiller;
+	}
+
+	public void setIdConseiller(int idConseiller) {
+		this.idConseiller = idConseiller;
+	}
 
 	public Gerant getGerant() {
 		return gerant;

@@ -15,6 +15,15 @@ public class Adresse {
 	private int codePostale;
 	private String ville;
 	
+	private int idAdresse;
+	
+	public int getIdAdresse() {
+		return idAdresse;
+	}
+	public void setIdAdresse(int idAdresse) {
+		this.idAdresse = idAdresse;
+	}
+
 	private Collection <Personne> lesPersonnes  = new ArrayList();
 	private Agence monAgence;
 	

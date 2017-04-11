@@ -7,6 +7,18 @@ public class Gerant extends Personne {
 
 	private Collection<Conseiller> conseillers = new ArrayList<Conseiller>();
 	private Agence agence = new Agence();
+	private int idGerant;
+	
+	
+	
+
+	public int getIdGerant() {
+		return idGerant;
+	}
+
+	public void setIdGerant(int idGerant) {
+		this.idGerant = idGerant;
+	}
 
 	public Agence getAgence() {
 		return agence;

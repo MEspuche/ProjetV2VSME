@@ -8,10 +8,18 @@ public class Compte {
 	private Client client;
 	private CarteBancaire carteBancaire;
 	String typeCompte; //epargne si compte epargne ou courant si compte courant
+	private int idCompte;
+	
+	
+	
+	public int getIdCompte() {
+		return idCompte;
+	}
 
-	
-	
-	
+	public void setIdCompte(int idCompte) {
+		this.idCompte = idCompte;
+	}
+
 	public String getTypeCompte() {
 		return typeCompte;
 	}

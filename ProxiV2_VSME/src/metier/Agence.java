@@ -9,7 +9,7 @@ package metier;
 
 public class Agence {
 
-	private String idAgence;
+	private int idAgence;
 	private long dateCreation;
 	private Gerant gerant;
 	private Adresse adresseAgence;
@@ -27,7 +27,7 @@ public class Agence {
 		this.gerant = gerant;
 	}
 
-	public Agence(String idAgence, long dateCreation, Gerant gerant) {
+	public Agence(int idAgence, long dateCreation, Gerant gerant) {
 		super();
 		this.idAgence = idAgence;
 		this.dateCreation = dateCreation;
@@ -36,7 +36,7 @@ public class Agence {
 	
 	
 
-	public Agence(String idAgence, long dateCreation, Gerant gerant, Adresse adresseAgence) {
+	public Agence(int idAgence, long dateCreation, Gerant gerant, Adresse adresseAgence) {
 		super();
 		this.idAgence = idAgence;
 		this.dateCreation = dateCreation;
@@ -44,7 +44,7 @@ public class Agence {
 		this.adresseAgence = adresseAgence;
 	}
 
-	public Agence(String idAgence, long dateCreation) {
+	public Agence(int idAgence, long dateCreation) {
 		super();
 		this.idAgence = idAgence;
 		this.dateCreation = dateCreation;
@@ -57,11 +57,11 @@ public class Agence {
 		return gerant;
 	}
 
-	public String getIdAgence() {
+	public int getIdAgence() {
 		return idAgence;
 	}
 
-	public void setIdAgence(String idAgence) {
+	public void setIdAgence(int idAgence) {
 		this.idAgence = idAgence;
 	}
 

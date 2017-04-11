@@ -6,7 +6,7 @@ import java.util.Collection;
 public class Client extends Personne {
 	
 	private Collection<Compte> comptes = new ArrayList<Compte>();
-	private Patrimoine patrimoine;
+	private Placement placement;
 	private Collection<Credit> credits = new ArrayList<Credit>();
 	private Conseiller conseiller;
 	private String typeClient; //particulier si client Particulier et entreprise si client Entreprise
@@ -57,23 +57,21 @@ public class Client extends Personne {
 		this.credits = credits;
 	}
 
-	public Client(Collection<Compte> comptes, Patrimoine patrimoine, Collection<Credit> credits,
-			Conseiller conseiller) {
+	
+	
+	public Client(Collection<Compte> comptes, Placement placement,  Conseiller conseiller) {
 		super();
 		this.comptes = comptes;
-		this.patrimoine = patrimoine;
-		this.credits = credits;
+		this.placement = placement;
 		this.conseiller = conseiller;
 	}
 
-
-
-	public Patrimoine getPatrimoine() {
-		return patrimoine;
+	public Placement getPlacement() {
+		return placement;
 	}
 
-	public void setPatrimoine(Patrimoine patrimoine) {
-		this.patrimoine = patrimoine;
+	public void setPlacement(Placement placement) {
+		this.placement = placement;
 	}
 
 	public Collection<Credit> getcredits() {

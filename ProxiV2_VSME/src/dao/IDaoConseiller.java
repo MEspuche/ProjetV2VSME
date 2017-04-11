@@ -5,7 +5,6 @@ import metier.CarteBancaire;
 import metier.Client;
 import metier.Compte;
 import metier.Conseiller;
-import metier.Patrimoine;
 import metier.Placement;
 import service.exception.AbsenceDeCompteCourantException;
 import service.exception.AbsenceDeCompteEpargneException;
@@ -33,7 +32,7 @@ public interface IDaoConseiller {
 	public void AfficherCompteClient (Compte compte);
 	public Client creerClient(Client c);
 	
-	public Placement creerPlacement(Patrimoine patrimoine, String typePlacement);
+	public Placement creerPlacement(String typePlacement);
 	public void supprimerPlacement(Placement placement);
 	void EffectuerVirement(int montant,Compte c1, Compte c2 )throws MontantNegatifException, MontantSuperieurAuSoldeException, DecouvertNonAutorise;
 	double EffectuerSimulationCredit(double montant, int taux, int duree) throws MontantNegatifException;

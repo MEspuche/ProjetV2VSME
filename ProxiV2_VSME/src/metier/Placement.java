@@ -4,20 +4,24 @@ import java.util.Collection;
 
 public class Placement {
 
-	private Patrimoine patrimoine;
+	private Client client;
 	private  int idPlacement;
 	private Localisation localisationPlacement;
 
-	public Placement(Patrimoine patrimoine) {
-		super();
-		this.patrimoine = patrimoine;
-		Collection<Placement> col = patrimoine.getPlacements();
-		idPlacement=col.size()+1;
 	
+	
+	
+	
+	public Client getClient() {
+		return client;
 	}
-	
-	
-	
+
+
+	public void setClient(Client client) {
+		this.client = client;
+	}
+
+
 	public Localisation getLocalisationPlacement() {
 		return localisationPlacement;
 	}
@@ -33,20 +37,8 @@ public class Placement {
 	}
 
 
-	public Placement(Patrimoine patrimoine, int idPlacement, Localisation localisationPlacement) {
-		super();
-		this.patrimoine = patrimoine;
-		this.idPlacement = idPlacement;
-		this.localisationPlacement = localisationPlacement;
-	}
 
 
-	public Placement() {
-		super();
-		Collection<Placement> col = patrimoine.getPlacements();
-		idPlacement=col.size()+1;
-		
-	}
 
 		
 	public int getIdPlacement() {
@@ -55,18 +47,7 @@ public class Placement {
 
 	
 
-	public Patrimoine getPatrimoine() {
-		return patrimoine;
-	}
 
-	public void setPatrimoine(Patrimoine patrimoine) {
-		this.patrimoine = patrimoine;
-	}
-
-	@Override
-	public String toString() {
-		return "Placement [patrimoine=" + patrimoine + ", idPlacement=" + idPlacement + "]";
-	}
 
 	
 	

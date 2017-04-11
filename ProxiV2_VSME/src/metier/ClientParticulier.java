@@ -4,9 +4,9 @@ import java.util.Collection;
 
 public class ClientParticulier extends Client {
 
-	public ClientParticulier(Collection<Compte> comptes, Patrimoine patrimoine, Collection<Credit> placements,
+	public ClientParticulier(Collection<Compte> comptes, Placement placement,
 			Conseiller conseiller) {
-		super(comptes, patrimoine, placements, conseiller);
+		super(comptes, placement, conseiller);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -1,8 +1,6 @@
 package service;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 
 import dao.Dao;
 import dao.IDaoConseiller;
@@ -12,11 +10,8 @@ import metier.Agence;
 import metier.CarteBancaire;
 import metier.Client;
 import metier.Compte;
-import metier.CompteCourant;
-import metier.CompteEpargne;
 import metier.Conseiller;
 import metier.Gerant;
-import metier.Patrimoine;
 import metier.Placement;
 import service.exception.AbsenceDeCompteCourantException;
 import service.exception.AbsenceDeCompteEpargneException;
@@ -455,9 +450,9 @@ public class Services implements IConseiller, IGerant {
 	 *            parametre qui permet de choisir le type de placement
 	 * @return retourne le placement crée
 	 */
-	public Placement creerPlacement(Patrimoine patrimoine, String typePlacement) {
+	public Placement creerPlacement(String typePlacement) {
 
-		return idaoconseiller.creerPlacement(patrimoine, typePlacement);
+		return idaoconseiller.creerPlacement(typePlacement);
 		/*
 		// calcul de la fortune client
 		Collection<Compte> col = patrimoine.getClient().getComptes();

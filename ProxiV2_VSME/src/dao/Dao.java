@@ -10,7 +10,6 @@ import metier.Client;
 import metier.Compte;
 import metier.Conseiller;
 import metier.Gerant;
-import metier.Patrimoine;
 import metier.Placement;
 import service.exception.AbsenceDeCompteCourantException;
 import service.exception.AbsenceDeCompteEpargneException;
@@ -145,7 +144,7 @@ public class Dao implements IDaoConseiller, IDaoGerant {
 	}
 
 	@Override
-	public Placement creerPlacement(Patrimoine patrimoine, String typePlacement) {
+	public Placement creerPlacement(String typePlacement) {
 		// TODO Auto-generated method stub
 		return null;
 	}

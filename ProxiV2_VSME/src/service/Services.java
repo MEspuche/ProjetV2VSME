@@ -35,7 +35,7 @@ public class Services implements IConseiller, IGerant {
 	 * Ajout d'un conseiller par un gérant
 	 */
 		@Override
-		public void AjouterConseiller(Gerant g, Conseiller co) {
+		public void ajouterConseiller(Gerant g, Conseiller co) {
 			idaogerant.AjouterConseiller(g, co);
 			
 			/*Collection<Conseiller> col = g.getConseillers(); // Récupère la liste des conseillers du gérant
@@ -50,7 +50,7 @@ public class Services implements IConseiller, IGerant {
 	 * Modification d'un conseiller par un gérant
 	 */
 		@Override
-		public void ModifierConseiller(Conseiller c, Adresse a, String telephone) {
+		public void modifierConseiller(Conseiller c, Adresse a, String telephone) {
 			
 			idaogerant.ModifierConseiller(c, a, telephone);
 			/*c.setSonAdresse(a);
@@ -63,7 +63,7 @@ public class Services implements IConseiller, IGerant {
 	 * Suppression d'un conseiller par un gérant
 	 */
 		@Override
-		public void SupprimerConseiller(Conseiller c, Gerant g) {
+		public void supprimerConseiller(Conseiller c, Gerant g) {
 
 		
 			Collection<Conseiller> col1 = g.getConseillers(); //Récupère la liste des conseillers du gérant
@@ -77,7 +77,7 @@ public class Services implements IConseiller, IGerant {
 	 */
 
 		@Override
-		public void AfficherConseiller(Conseiller c) {
+		public void afficherConseiller(Conseiller c) {
 			idaogerant.AfficherConseiller(c);
 		}
 	
@@ -130,7 +130,7 @@ public class Services implements IConseiller, IGerant {
 	 * @return retourne l'Objet Client Creer
 	 */
 
-		public Client creerClient(Client c) {
+		private Client creerClient(Client c) {
 
 			return idaoconseiller.creerClient(c);
 			/*
@@ -153,7 +153,7 @@ public class Services implements IConseiller, IGerant {
 		
 		
 	@Override
-	public void AjouterClient(Conseiller co, Client c) throws LeConseillerADeja10Clients {
+	public void ajouterClient(Conseiller co, Client c) throws LeConseillerADeja10Clients {
 	
 		idaoconseiller.AjouterClient(co, c);
 		
@@ -187,7 +187,7 @@ public class Services implements IConseiller, IGerant {
 	 */
 	
 	
-	public Compte creationCompte(Compte c) {
+	private Compte creationCompte(Compte c) {
 
 		return idaoconseiller.creationCompte(c);
 		// pour choisir type de client
@@ -210,7 +210,7 @@ public class Services implements IConseiller, IGerant {
 	
 	
 		@Override
-		public void AjouterCompteClient(Client c, Compte co) throws CompteEpargneExistantException, CompteCourantExistantException {
+		public void ajouterCompteClient(Client c, Compte co) throws CompteEpargneExistantException, CompteCourantExistantException {
 			
 			idaoconseiller.AjouterCompteClient(c, co);
 			
@@ -264,7 +264,7 @@ public class Services implements IConseiller, IGerant {
 		}
 
 		@Override
-		public void ModifierClient(Client c, Adresse a, String telephone) {
+		public void modifierClient(Client c, Adresse a, String telephone) {
 				idaoconseiller.ModifierClient(c, a, telephone);	
 			/*
 			 * c.setTelephone(telephone);
@@ -278,7 +278,7 @@ public class Services implements IConseiller, IGerant {
 	 */
 
 		@Override
-		public void AfficherClient(Client c) {
+		public void afficherClient(Client c) {
 		idaoconseiller.AfficherClient(c);
 		}
 	
@@ -288,7 +288,7 @@ public class Services implements IConseiller, IGerant {
 	 */
 
 		@Override
-		public void SupprimerClient(Client c, Conseiller co) {
+		public void supprimerClient(Client c, Conseiller co) {
 			idaoconseiller.SupprimerClient(c, co);
 			/*
 			Collection<Client> col = co.getClients(); //Récupération de la liste des clients du conseiller dans la collection col
@@ -307,7 +307,7 @@ public class Services implements IConseiller, IGerant {
 	 */
 
 		@Override
-		public void SupprimerCompteClient(Compte co, Client c) throws AbsenceDeCompteEpargneException, AbsenceDeCompteCourantException {
+		public void supprimerCompteClient(Compte co, Client c) throws AbsenceDeCompteEpargneException, AbsenceDeCompteCourantException {
 			idaoconseiller.SupprimerCompteClient(co, c);
 			
 			/*
@@ -360,7 +360,7 @@ public class Services implements IConseiller, IGerant {
 		 * Affichage d'un compte client
 		 */
 			@Override
-			public void AfficherCompteClient(Compte compte) {
+			public void afficherCompteClient(Compte compte) {
 				idaoconseiller.AfficherCompteClient(compte);
 			}
 
@@ -372,7 +372,7 @@ public class Services implements IConseiller, IGerant {
 	 */
 	
 	@Override
-	public void EffectuerVirement(int montant,Compte c1, Compte c2) throws MontantNegatifException, MontantSuperieurAuSoldeException, DecouvertNonAutorise {
+	public void effectuerVirement(int montant,Compte c1, Compte c2) throws MontantNegatifException, MontantSuperieurAuSoldeException, DecouvertNonAutorise {
 		
 		idaoconseiller.EffectuerVirement(montant, c1, c2);
 		
@@ -421,7 +421,7 @@ public class Services implements IConseiller, IGerant {
 	 * @throws MontantNegatifException 
 	 */
 		@Override
-		public double EffectuerSimulationCredit(double montant, int taux, int duree) throws MontantNegatifException {
+		public double effectuerSimulationCredit(double montant, int taux, int duree) throws MontantNegatifException {
 			
 			return idaoconseiller.EffectuerSimulationCredit(montant, taux, duree);
 			/*
@@ -535,7 +535,7 @@ public class Services implements IConseiller, IGerant {
 	 */
 
 		@Override
-		public void ActivationCarteVisa(Compte c, CarteBancaire cv) {
+		public void activationCarteVisa(Compte c, CarteBancaire cv) {
 			
 			idaoconseiller.ActivationCarteVisa(c, cv);
 			/*
@@ -549,7 +549,7 @@ public class Services implements IConseiller, IGerant {
 	 */
 
 		@Override
-		public void DesactivationCarteVisa(Compte c, CarteBancaire cv) {
+		public void desactivationCarteVisa(Compte c, CarteBancaire cv) {
 			idaoconseiller.DesactivationCarteVisa(c, cv);
 			
 			/*

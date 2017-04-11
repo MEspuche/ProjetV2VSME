@@ -12,9 +12,9 @@ import service.exception.AuditNegatifException;
 public interface IGerant {
 
 	public String effectuerAudit(Agence agence);
-	public void AjouterConseiller(Gerant g, Conseiller co);
-	public void SupprimerConseiller(Conseiller c, Gerant g);
-	public void AfficherConseiller(Conseiller c);
-	void ModifierConseiller(Conseiller c, Adresse a, String telephone);
+	public void ajouterConseiller(Gerant g, Conseiller co);
+	public void supprimerConseiller(Conseiller c, Gerant g);
+	public void afficherConseiller(Conseiller c);
+	public void modifierConseiller(Conseiller c, Adresse a, String telephone);
 	
 }
